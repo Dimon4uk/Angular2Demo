@@ -1,0 +1,12 @@
+<p>
+  User List
+</p>
+
+
+<div  *ngFor="let user of users">
+  <div class="row">
+    <div class="col-md-3">{{user.login}}</div>
+    <div class="col-md-3">{{user.email}}</div>
+
+  </div>
+</div>
