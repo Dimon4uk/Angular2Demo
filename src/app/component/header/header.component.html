@@ -2,10 +2,11 @@
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
-      <a class="navbar-brand" href="">{{title}}</a>
+      <a class="navbar-brand" [routerLink]="['/']">{{title}}</a>
+
       <ul class="nav navbar-nav">
-        <li><a href="/recipes">Recipes</a></li>
-        <li><a href="/users">Users</a></li>
+        <li><a [routerLink]="['/recipes']" >Recipes</a></li>
+        <li><a [routerLink]="['/users']">Users</a></li>
       </ul>
     </div>
 
@@ -14,12 +15,13 @@
 
 
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="/about" >About</a></li>
-        <li><a href="/contact" >Contact</a></li>
+        <li><a [routerLink]="['/about']" >About</a></li>
+        <li><a [routerLink]="['/contact']" >Contact</a></li>
         <li class="dropdown" appDropdown  >
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+          <a [routerLink]="['/#']" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+            Dropdown <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="/account">User</a></li>
+            <li><a [routerLink]="['/account']">User</a></li>
 
           </ul>
         </li>
