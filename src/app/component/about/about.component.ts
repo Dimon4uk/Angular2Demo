@@ -5,7 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './about.component.html'
 })
 export class AboutComponent implements OnInit {
-
+  title = "About Us";
   constructor() { }
 
   ngOnInit() {

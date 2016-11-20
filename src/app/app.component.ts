@@ -10,7 +10,6 @@ import {DataService} from "./service/data.service";
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],
   viewProviders: [HeaderComponent ],
   providers: [DataService]
 })

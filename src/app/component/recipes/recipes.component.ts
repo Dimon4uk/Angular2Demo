@@ -11,6 +11,7 @@ import {Recipe} from "../../model/recipe";
   viewProviders: [RecipeListComponent, RecipeDetailComponent ]
 })
 export class RecipesComponent implements OnInit {
+  title = "Recipes";
   selectedRecipe: Recipe;
   constructor() { }
 

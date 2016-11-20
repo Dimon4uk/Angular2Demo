@@ -6,10 +6,10 @@ import {User} from "../../model/user";
 @Component({
   selector: 'app-users',
   templateUrl: './users.component.html',
-  styleUrls: ['./users.component.css'],
   providers:[DataService]
 })
 export class UsersComponent implements OnInit {
+  title = "Users";
   private  users :User[] = [];
 
   constructor(private dataService: DataService) { }

@@ -18,6 +18,8 @@ import {routing} from "./route/app.router";
 import { ContactComponent } from './component/contact/contact.component';
 import { AccountComponent } from './component/account/account.component';
 import { UsersComponent } from './component/users/users.component';
+import { RegisterComponent } from './component/register/register.component';
+import { LoginComponent } from './component/login/login.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,9 @@ import { UsersComponent } from './component/users/users.component';
     AboutComponent,
     ContactComponent,
     AccountComponent,
-    UsersComponent
+    UsersComponent,
+    RegisterComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
