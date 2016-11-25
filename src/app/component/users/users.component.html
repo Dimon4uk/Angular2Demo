@@ -2,6 +2,8 @@
   <h1>{{title}}</h1>
 </div>
 
+</div>
+
 <div  *ngFor="let user of users">
   <div class="row">
     <div class="col-md-3">{{user.login}}</div>
@@ -9,3 +11,24 @@
 
   </div>
 </div>
+
+<!--<div  >-->
+      <!--<div class="row">-->
+
+       <!--<div class="col-md-2">Display name</div>-->
+       <!--<div class="col-md-2">Email</div>-->
+       <!--<div class="col-md-2">First name</div>-->
+       <!--<div class="col-md-2">Last name</div>-->
+       <!--<div class="col-md-2">Phone</div>-->
+       <!--<div class="col-md-2">Date of birth</div>-->
+      <!--</div>-->
+
+      <!--<div class="row" *ngFor="let user of users" #user>-->
+        <!--<div class="col-md-2">{{user.displayName}}</div>-->
+        <!--<div class="col-md-2">{{user.username}}</div>-->
+        <!--<div class="col-md-2">{{user.firstName}}</div>-->
+        <!--<div class="col-md-2">{{user.lastName}}</div>-->
+        <!--<div class="col-md-2">{{user.phoneNumber}}</div>-->
+        <!--<div class="col-md-2">{{user.dateOfBirth}}</div>-->
+      <!--</div>-->
+<!--</div>-->

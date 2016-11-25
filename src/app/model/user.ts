@@ -1,5 +1,23 @@
 export class User {
 
-  constructor( login: string, username: string, id: number) {
-  }
+  // constructor(
+  //   displayName: string,
+  //   username: string,
+  //   private id: number,
+  //   dateOfBirth: Date,
+  //   firstName: string,
+  //   lastName: string,
+  //   gender:string,
+  //   phoneNumber:string,
+  //   private role: string
+  //
+  // ) {}
+  constructor(
+    displayName: string,
+    username: string,
+    firstName: string,
+    lastName: string,
+    phoneNumber:string,
+  ) {}
+
 }

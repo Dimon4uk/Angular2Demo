@@ -1,0 +1,12 @@
+<div class="row">
+  <div class="colxs-12">
+    <a class="btn btn-success" (click)="AddArticle()">New </a>
+  </div>
+</div>
+<div class="row">
+  <div class="colxs-12">
+    <ul class="list-group">
+        <app-article-item *ngFor="let article of articles" [article]="article" ></app-article-item>
+    </ul>
+  </div>
+</div>

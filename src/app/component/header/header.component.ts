@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {DropdownDirective} from "./dropdown.directive";
+import {AuthService} from "../../service/auth.service";
 
 
 
@@ -10,11 +11,20 @@ import {DropdownDirective} from "./dropdown.directive";
   viewProviders: [DropdownDirective]
 })
 export class HeaderComponent implements OnInit {
+  title = "Angular 2 Demo";
 
-  constructor() { }
+  constructor(private authService: AuthService) { }
 
   ngOnInit() {
   }
 
-  title = "Angular 2 Demo";
+
+
+  isLogged(){
+    return this.authService.isLogged();
+  }
+
+  logOut() {
+    this.authService.logOut();
+  }
 }

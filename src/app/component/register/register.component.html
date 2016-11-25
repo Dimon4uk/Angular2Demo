@@ -1,0 +1,126 @@
+<div class="page-header">
+  <h1 class="text-center">{{title}}</h1>
+</div>
+<div class="row"  >
+  <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
+    <div class="account-wall">
+      <img alt="" class="profile-img"
+           src="../../../assets/images/photo.png">
+      <form [formGroup]="registerForm" (submit)="onSubmit()" style="padding: 30px;">
+        <hr class="colorgraph">
+        <div class="row ">
+          <div class="col-xs-12 col-sm-6 col-md-6">
+            <div class="form-group">
+              <input #firstName formControlName="firstName" type="text" name="first_name" id="first_name" class="form-control input-lg" placeholder="First Name" tabindex="1">
+            </div>
+            <span *ngIf="!registerForm.controls['firstName'].valid && !registerForm.controls['firstName'].pristine" class="has-error">
+               First Name is required
+          </span>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-6">
+            <div class="form-group">
+              <input #lastName formControlName="lastName" type="text" name="last_name" id="last_name" class="form-control input-lg" placeholder="Last Name" tabindex="2">
+            </div>
+            <span *ngIf="!registerForm.controls['lastName'].valid && !registerForm.controls['lastName'].pristine" class="has-error">
+               Last Name is required
+          </span>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+            <input #displayName formControlName="displayName" type="text" name="display_name" id="display_name" class="form-control input-lg" placeholder="Username" tabindex="3">
+          </div>
+          <span *ngIf="!registerForm.controls['displayName'].valid && !registerForm.controls['displayName'].pristine" class="has-error">
+               Username is required
+          </span>
+        </div>
+        <div class="form-group">
+          <div class="input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+            <input #username formControlName="username" type="email" name="email" id="email" class="form-control input-lg" placeholder="Email Address" tabindex="4">
+
+          </div>
+          <span *ngIf="!registerForm.controls['username'].valid && !registerForm.controls['username'].pristine" class="has-error">
+              Incorrect email
+          </span>
+        </div>
+        <div class="form-group">
+
+          <div class="input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+            <input formControlName="dateOfBirth" type="text" class="form-control input-lg" placeholder="Date of Birth" />
+          </div>
+
+        </div>
+        <div class="row">
+          <label class="control-label col-sm-3">Gender <span class="text-danger">*</span></label>
+          <div class="col-md-8 col-sm-9">
+            <div class="radio" *ngFor="let g of genders">
+                <label>
+                  <input type="radio"
+                         formControlName="gender"
+                         [value]="g">
+                  {{g}}
+                </label>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+
+          <div class="input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-phone"></i></span>
+            <input #phoneNumber formControlName="phoneNumber" type="text" class="form-control input-lg"  name="phoneNumber" id="phoneNumber" placeholder="Contact No." >
+          </div>
+          <span *ngIf="!registerForm.controls['phoneNumber'].valid && !registerForm.controls['phoneNumber'].pristine" class="has-error">
+              Contact No is required
+          </span>
+        </div>
+        <div class="row">
+          <div class="col-xs-12 col-sm-6 col-md-6">
+            <div class="form-group">
+              <div class="input-group">
+
+                <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                <input #password formControlName="password" type="password" name="password" id="password" class="form-control input-lg" placeholder="Password" tabindex="5">
+              </div>
+
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-6">
+            <div class="form-group">
+              <div class="input-group">
+
+                <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                <input formControlName="passwordConfirmation" type="password" name="password_confirmation" id="password_confirmation" class="form-control input-lg" placeholder="Confirm Password" tabindex="6">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-4 col-sm-3 col-md-3">
+					<div  class="input-group">
+						<input formGroupName="isAgree"  type="checkbox" />  <span> I Agree</span>
+					</div>
+
+          </div>
+          <div class="col-xs-8 col-sm-9 col-md-9">
+            By clicking <strong class="label label-primary">Register</strong>, you agree to the <a href="#" data-toggle="modal" data-target="#t_and_c_m">Terms and Conditions</a> set out by this site, including our Cookie Use.
+          </div>
+        </div>
+
+        <hr class="colorgraph">
+        <div class="row">
+          <div class="col-xs-12 col-md-6">
+            <input [disabled]="!registerForm.valid" type="submit" value="Sign Up" class="btn btn-primary btn-block btn-lg" tabindex="7">
+          </div>
+          <div class="col-xs-12 col-md-6">
+            <a [routerLink]="['/login']" class="btn btn-success btn-block btn-lg">Sign In</a>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, Input} from '@angular/core';
 import {DataService} from "../../service/data.service";
 import {Response} from "@angular/http";
 import {User} from "../../model/user";
@@ -10,15 +10,19 @@ import {User} from "../../model/user";
 })
 export class UsersComponent implements OnInit {
   title = "Users";
-  private  users :User[] = [];
+  users :User[] = [
+    new User('admin', 'admin@admin.com', 'admin', 'admin',  '093 1234567' )
+  ];
 
-  constructor(private dataService: DataService) { }
+  constructor(private dataService: DataService) {
+    // Array.prototype.push(this.users, this.dataService.getUsers()).apply();
+  }
 
   ngOnInit() {
-    this.dataService.getUsers()
-      .subscribe(
-        (data:Response) => Array.prototype.push.apply(this.users, data.json())
-      );
+    // Array.prototype.push(this.users, this.dataService.getUsers());
+      // .subscribe(
+      //   (data:Response) => Array.prototype.push.apply(this.users, data.json())
+      // );
 
   }
 

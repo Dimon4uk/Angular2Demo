@@ -6,7 +6,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutComponent implements OnInit {
   title = "About Us";
-  constructor() { }
+  // initial center position for the map
+  lat: number = 51.678418;
+  lng: number = 7.809007;
+
+  constructor() {
+  }
 
   ngOnInit() {
   }
