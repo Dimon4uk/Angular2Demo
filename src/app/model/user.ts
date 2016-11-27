@@ -1,17 +1,5 @@
 export class User {
 
-  // constructor(
-  //   displayName: string,
-  //   username: string,
-  //   private id: number,
-  //   dateOfBirth: Date,
-  //   firstName: string,
-  //   lastName: string,
-  //   gender:string,
-  //   phoneNumber:string,
-  //   private role: string
-  //
-  // ) {}
   constructor(
     displayName: string,
     username: string,
@@ -19,5 +7,4 @@ export class User {
     lastName: string,
     phoneNumber:string,
   ) {}
-
 }

@@ -1,0 +1,12 @@
+import {Authority} from "./authority";
+
+export class AuthUser {
+
+  authorities : Authority[];
+
+  email: string;
+  enabled: boolean;
+  firstname:string;
+  lastname: string;
+  username:string;
+}
