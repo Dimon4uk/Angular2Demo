@@ -6,14 +6,17 @@ import {Router} from "@angular/router";
 
 @Injectable()
 export class AuthService {
-  token: string;
+  token;
   userKey: string = "token";
   tokenKey: string = "authUser";
   headers: Headers = new Headers();
   private apiURL: string = "http://localhost:8080";
   currentUser = null;
 
-  constructor(private http: Http, private storage: LocalStorageService, private router: Router) { }
+  constructor(private http: Http, private storage: LocalStorageService, private router: Router) {
+    this.currentUser = storage.get(this.userKey);
+    this.token = storage.get(this.tokenKey);
+  }
 
   logIn(user){
     this.headers.append('Content-Type', 'application/json;charset=UTF-8');
@@ -22,7 +25,7 @@ export class AuthService {
 
         let token = response.json() && response.json().token;
         if (token) {
-          this.token = response.json().token;
+          this.token = response.json().token.toString();
           this.setCurrentUser();
 
           if(this.currentUser  != null) {
